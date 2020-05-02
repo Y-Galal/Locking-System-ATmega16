@@ -10,14 +10,14 @@
 /********************************************************
  *                    Includes                          *
  ********************************************************/
-#include <avr/io.h>
-#include <util/delay.h>
+
 #include "std_types.h"
 #include "common_macros.h"
+#include "micro_config.h"
 /********************************************************
  *                       Macros                         *
  ********************************************************/
-#define DATA_BITS_MODE 4
+#define DATA_BITS_MODE 8
 #if (DATA_BITS_MODE == 4)
 #define UPPER_PORT_PINS
 #endif

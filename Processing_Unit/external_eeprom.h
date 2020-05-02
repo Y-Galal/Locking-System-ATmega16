@@ -15,6 +15,7 @@
 #define EXTERNAL_EEPROM_H_
 
 #include "std_types.h"
+#include "common_macros.h"
 
 /*******************************************************************************
  *                      Preprocessor Macros                                    *
