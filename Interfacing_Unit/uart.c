@@ -10,7 +10,7 @@
 
 #include "uart.h"
 
-#define BAUD_PRESCALE (((F_CPU / (USART_BAUDRATE * 8UL))) - 1)
+#define BAUD_PRESCALE 103
 
 /*******************************************************************************
  *                      Functions Definitions                                  *
@@ -41,8 +41,7 @@ void UART_init(void)
 	UCSRC = (1<<URSEL) | (1<<UCSZ0) | (1<<UCSZ1); 
 	
 	/* First 8 bits from the BAUD_PRESCALE inside UBRRL and last 4 bits in UBRRH*/
-	UBRRH = BAUD_PRESCALE>>8;
-	UBRRL = BAUD_PRESCALE;
+	UBRRL = 103;
 }
 	
 void UART_sendByte(const uint8 data)

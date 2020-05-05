@@ -7,17 +7,14 @@
 
 int main()
 {
-    uint8 passwordToSend[7];
+    uint8 passwordToSend[8];
     LCD_appInit();
     UART_appInit();
-    if(checkFirstTime(50) == 1)
+
+    while(1)
     {
         while( SysConfig(passwordToSend) == 0){};
         sendPassword(passwordToSend,SAVE_PASSWORD);
-    }    
-    
-    while(1)
-    {
         idleMode();
     }
 }

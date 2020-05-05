@@ -1,11 +1,11 @@
 MCU=atmega16
-F_CPU=10000000
+F_CPU=80000000
 CC=avr-gcc
 OBJCOPY=avr-objcopy
 ELF=elf_out
 MAP=map_out
 SIZE=avr-size
-CFLAGS=-Wl,-Map,out/${MAP}.map -mmcu=${MCU} -DF_CPU=${F_CPU} -Iinc -O1 -std=gnu99
+CFLAGS=-Wl,-Map,out/${MAP}.map -mmcu=${MCU} -DF_CPU=${F_CPU} -Iinc -O0 -std=gnu99
 TARGET=hex_out
 SRCS=*.c
 

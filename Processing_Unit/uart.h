@@ -31,7 +31,7 @@ void UART_init(void);
 
 void UART_sendByte(const uint8 data);
 
-uint8 UART_recieveByte(void);
+uint8 UART_receiveByte(void);
 
 void UART_sendString(const uint8 *Str);
 

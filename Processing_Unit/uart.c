@@ -12,7 +12,7 @@
 
 #include "uart.h"
 
-#define BAUD_PRESCALE (((F_CPU / (USART_BAUDRATE * 8UL))) - 1)
+#define BAUD_PRESCALE 103
 
 /*******************************************************************************
  *                      Functions Definitions                                  *
@@ -43,8 +43,7 @@ void UART_init(void)
 	UCSRC = (1<<URSEL) | (1<<UCSZ0) | (1<<UCSZ1); 
 	
 	/* First 8 bits from the BAUD_PRESCALE inside UBRRL and last 4 bits in UBRRH*/
-	UBRRH = BAUD_PRESCALE>>8;
-	UBRRL = BAUD_PRESCALE;
+	UBRRL = 103;
 }
 	
 void UART_sendByte(const uint8 data)
@@ -62,7 +61,7 @@ void UART_sendByte(const uint8 data)
 	*******************************************************************/	
 }
 
-uint8 UART_recieveByte(void)
+uint8 UART_receiveByte(void)
 {
 	/* RXC flag is set when the UART receive data so wait until this 
 	 * flag is set to one */
@@ -92,11 +91,11 @@ void UART_sendString(const uint8 *Str)
 void UART_receiveString(uint8 *Str)
 {
 	uint8 i = 0;
-	Str[i] = UART_recieveByte();
+	Str[i] = UART_receiveByte();
 	while(Str[i] != '#')
 	{
 		i++;
-		Str[i] = UART_recieveByte();
+		Str[i] = UART_receiveByte();
 	}
 	Str[i] = '\0';
 }

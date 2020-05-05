@@ -24,15 +24,15 @@
 #endif
 
 /* Hw Pins */
-#define RS PD4
-#define RW PD5
-#define E PD6
+#define RS PB0
+#define RW PB1
+#define E PB2
 
-#define LCD_CTRL_PORT PORTD
-#define LCD_CTRL_PORT_DIR DDRD
+#define LCD_CTRL_PORT PORTB
+#define LCD_CTRL_PORT_DIR DDRB
 
-#define LCD_DATA_PORT PORTB
-#define LCD_DATA_PORT_DIR DDRB
+#define LCD_DATA_PORT PORTA
+#define LCD_DATA_PORT_DIR DDRA
 
 /* LCD Commands */
 #define CLEAR_COMMAND 0x01

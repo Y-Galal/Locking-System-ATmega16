@@ -13,9 +13,10 @@
 #define TIMER1_H_
 #include "std_types.h"
 #include "common_macros.h"
-#include <avr/io.h>
-#include <avr/interrupt.h>
+#include "micro_config.h"
+#ifndef NULL
 #define NULL 0
+#endif
 typedef enum TimerMode {NORMAL,COMPARE} Mode;
 typedef enum ClockSelect {NOCLK,CLK_1,CLK_8,CLK_64,CLK_256,CLK_1024}Prescalar;
 typedef struct TimerConfigurations
