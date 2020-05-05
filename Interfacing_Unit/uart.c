@@ -6,6 +6,7 @@
  *
  * Description: Source file for the UART AVR driver
  *
+ * Made by : Youssef Galal
  *******************************************************************************/
 
 #include "uart.h"

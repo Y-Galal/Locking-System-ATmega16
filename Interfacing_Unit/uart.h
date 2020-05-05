@@ -5,6 +5,8 @@
  * File Name: uart.h
  *
  * Description: Header file for the UART AVR driver
+ * 
+ * Made By: Youssef Galal
  *
  *******************************************************************************/
 

@@ -1,3 +1,7 @@
+
+
+#ifndef _MOTOR_H_
+#define _MOTOR_H_
 #include "common_macros.h"
 #include "micro_config.h"
 #include "std_types.h"
@@ -8,3 +12,5 @@
 
 void motor(uint8 condition);
 void motorInit();
+
+#endif

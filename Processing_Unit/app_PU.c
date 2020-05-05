@@ -8,12 +8,12 @@
 int main()
 {
     uint8 incoming;
-    UART_appInit();
+    UART_appInit();         /*Startin UART, EEPROM,Motor and buzzer*/
     EEPROM_appInit();
     motorAndBuzz_appInit();
     while(1)
     {
-        incoming = receiveRequest();
+        incoming = receiveRequest();        /*waiting for an incoming request*/
         if(incoming == SAVE_PASSWORD)
         {
             savePassword();

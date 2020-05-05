@@ -17,7 +17,7 @@ void LCD_init(void)
 		#endif
 		LCD_sendCommand(FOUR_BITS_DATA_MODE);
 		LCD_sendCommand(TWO_LINE_LCD_FOUR_BIT_MODE);
-	#else (DATA_BITS_MODE == 8)
+	#elif (DATA_BITS_MODE == 8)
 		LCD_DATA_PORT_DIR |= 0xFF; /* All pins are output pins  */
 		LCD_sendCommand(TWO_LINE_LCD_EIGHT_BIT_MODE);
 	#endif
