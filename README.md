@@ -1,4 +1,4 @@
-# Locking-System-ATmega16
+# Door Locking System ATmega16
 Door Locking system using Atmega16 Micro Controller
 # Door Security System
 
